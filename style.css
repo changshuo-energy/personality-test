@@ -1,0 +1,155 @@
+:root {
+  color-scheme: light dark;
+  --bg: #0f1115;
+  --card: #171a21;
+  --text: #eceff4;
+  --muted: #abb2bf;
+  --primary: #6ea8fe;
+  --danger: #ff6b6b;
+  --border: #2b313d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+  background: radial-gradient(circle at top, #1b2030 0%, var(--bg) 45%);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+
+.hero {
+  margin-bottom: 18px;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #c9d1d9;
+  background: #2a2f3a;
+  border: 1px solid #3a414f;
+  border-radius: 999px;
+  padding: 4px 10px;
+}
+
+.hero h1 {
+  margin: 12px 0 6px;
+  font-size: clamp(28px, 5vw, 38px);
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+}
+
+.card {
+  background: linear-gradient(180deg, #1a1f29 0%, var(--card) 100%);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+  margin-top: 14px;
+}
+
+.hidden {
+  display: none;
+}
+
+.quiz-head {
+  margin-bottom: 12px;
+}
+
+.progress-track {
+  width: 100%;
+  height: 8px;
+  background: #282d39;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #5ca1ff, #9a7dff);
+  transition: width 180ms ease;
+}
+
+.answers {
+  display: grid;
+  gap: 10px;
+}
+
+.answer-btn {
+  text-align: left;
+  border: 1px solid #364053;
+  background: #202633;
+  color: var(--text);
+  padding: 12px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 120ms ease, border-color 120ms ease;
+}
+
+.answer-btn:hover {
+  border-color: #7ea4f7;
+  transform: translateY(-1px);
+}
+
+.btn {
+  border: 1px solid #4b556a;
+  border-radius: 10px;
+  padding: 10px 14px;
+  background: #2a3243;
+  color: #eef2ff;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: linear-gradient(90deg, #5ca1ff, #7f73ff);
+  border-color: transparent;
+}
+
+.btn.ghost {
+  background: transparent;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.result-output h3 {
+  margin-bottom: 4px;
+}
+
+.result-output p {
+  margin-top: 0;
+  color: #d8deea;
+}
+
+.ad-slot {
+  border: 1px dashed #4e5f7d;
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin: 14px 0;
+  background: #1a2231;
+  color: #b8c4d9;
+}
+
+.unlock-output {
+  margin-top: 12px;
+  border: 1px solid #3d4658;
+  border-radius: 12px;
+  padding: 12px;
+}

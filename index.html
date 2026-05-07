@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>病毒型人格測驗</title>
+    <meta
+      name="description"
+      content="三層人格測驗：表人格、裡人格、黑暗人格。敢不敢測你最不想承認的那一面？"
+    />
+    <!-- AdSense: 將 ca-pub-xxxxxxxx 改成你的 Publisher ID -->
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7149341893905195"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <p class="badge">病毒型人格測驗</p>
+        <h1>你不只一種人格</h1>
+        <p class="subtitle">
+          15 題拆出你的表人格、裡人格、黑暗人格。這份測驗不保證溫柔，只保證真實到想分享。
+        </p>
+      </header>
+
+      <section id="startCard" class="card">
+        <h2>開始前提醒</h2>
+        <ul>
+          <li>不是心理醫療工具，結果僅供娛樂與自我觀察。</li>
+          <li>答題請選「最像你」的第一直覺。</li>
+          <li>黑暗人格權重較高，結果會比較刺。</li>
+        </ul>
+        <button id="startBtn" class="btn primary">開始測驗</button>
+      </section>
+
+      <section id="quizCard" class="card hidden">
+        <div class="quiz-head">
+          <p id="progressText">第 1 / 15 題</p>
+          <div class="progress-track">
+            <div id="progressBar" class="progress-bar"></div>
+          </div>
+        </div>
+        <h2 id="questionTitle"></h2>
+        <div id="answers" class="answers"></div>
+
+        <div id="adMid" class="ad-slot hidden">
+          <p>廣告位（題目中段，CPM 高）</p>
+          <!-- TODO: 把 data-ad-slot 換成你在 AdSense 建的「廣告單元 ID」 -->
+          <ins
+            class="adsbygoogle"
+            style="display: block"
+            data-ad-client="ca-pub-7149341893905195"
+            data-ad-slot="1111111111"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          ></ins>
+        </div>
+      </section>
+
+      <section id="resultCard" class="card hidden">
+        <h2>你的三層人格結果</h2>
+        <div id="resultOutput" class="result-output"></div>
+
+        <div id="adResult" class="ad-slot">
+          <p>廣告位（結果頁）</p>
+          <!-- TODO: 把 data-ad-slot 換成你在 AdSense 建的「廣告單元 ID」 -->
+          <ins
+            class="adsbygoogle"
+            style="display: block"
+            data-ad-client="ca-pub-7149341893905195"
+            data-ad-slot="2222222222"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          ></ins>
+        </div>
+
+        <div class="share-block">
+          <h3>分享到社群</h3>
+          <p id="shareText"></p>
+          <div class="actions">
+            <button id="copyShareBtn" class="btn">複製分享文案</button>
+            <button id="nativeShareBtn" class="btn">一鍵分享</button>
+            <button id="retryBtn" class="btn ghost">重測一次</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="unlockCard" class="card hidden">
+        <h2>解鎖完整版人格</h2>
+        <p>完成分享後，解鎖你在戀愛與金錢情境下的黑暗人格。</p>
+        <div class="actions">
+          <button id="unlockBtn" class="btn primary">我已分享，立即解鎖</button>
+        </div>
+
+        <div id="adUnlock" class="ad-slot">
+          <p>廣告位（解鎖頁，CPM 最高）</p>
+          <!-- TODO: 把 data-ad-slot 換成你在 AdSense 建的「廣告單元 ID」 -->
+          <ins
+            class="adsbygoogle"
+            style="display: block"
+            data-ad-client="ca-pub-7149341893905195"
+            data-ad-slot="3333333333"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          ></ins>
+        </div>
+
+        <div id="unlockOutput" class="unlock-output hidden"></div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+    <script>
+      // 嘗試初始化頁面上的所有 AdSense 單元
+      // 若被廣告阻擋器擋下，或尚未審核通過，這裡可能不會顯示任何廣告。
+      (function () {
+        try {
+          var nodes = document.querySelectorAll("ins.adsbygoogle");
+          for (var i = 0; i < nodes.length; i++) {
+            (window.adsbygoogle = window.adsbygoogle || []).push({});
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </body>
+</html>
